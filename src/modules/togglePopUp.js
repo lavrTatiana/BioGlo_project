@@ -1,11 +1,13 @@
 
 const togglePopUp = () => {
 
-  const callBtn = document.querySelector('.call-btn'),
-      popupCall = document.querySelector('.popup-call');
+  const callBtn = document.querySelectorAll('.call-btn'),
+        popupCall = document.querySelector('.popup-call');
 
-  callBtn.addEventListener('click', () => {
-    popupCall.style.display = 'block';
+  callBtn.forEach((elem) => {
+    elem.addEventListener('click', () => {
+      popupCall.style.display = 'block';
+    });
   });
 
   popupCall.addEventListener('click', (event) => {
