@@ -5,6 +5,7 @@ import sendForm from './modules/sendForm';
 import executionSentence from './modules/executionSentence';
 import calculate from './modules/calculate';
 import questionsAccord from './modules/questionsAccord';
+import checkSale from './modules/checkSale';
 
 // PopUp по клику "Перезвоните мне"
 popUpCall();
@@ -20,3 +21,6 @@ calculate();
 
 // Аккордеон с вопросами
 questionsAccord();
+
+// PopUp для получения скидки
+checkSale();
