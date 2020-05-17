@@ -1,11 +1,14 @@
 'use strict';
 
-import togglePopUp from './modules/togglePopUp';
-import sendForm from './modules/sendForm.js';
-
+import popUpCall from './modules/popUpCall';
+import sendForm from './modules/sendForm';
+import executionSentence from './modules/executionSentence';
 
 // PopUp по клику "Перезвоните мне"
-togglePopUp();
+popUpCall();
 
 // Отправка данных с форм
 sendForm();
+
+// Работа блока Sentence
+executionSentence();
