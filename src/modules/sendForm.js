@@ -12,7 +12,6 @@ const sendForm = () => {
 
     const inputs = form.querySelectorAll('input');
     inputs.forEach((item) => {
-      console.log(item);
       
       if (item.className === 'phone-user') {
         item.addEventListener('keypress', e => {
