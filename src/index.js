@@ -7,7 +7,11 @@ import calculate from './modules/calculate';
 import questionsAccord from './modules/questionsAccord';
 import checkSale from './modules/checkSale';
 import messageForm from './modules/messageForm';
+import maskPhone from './modules/maskPhone';
 
+
+// Применение маски
+maskPhone('.phone-user');
 
 // PopUp по клику "Перезвоните мне"
 popUpCall();
