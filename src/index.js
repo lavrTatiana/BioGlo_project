@@ -6,6 +6,8 @@ import executionSentence from './modules/executionSentence';
 import calculate from './modules/calculate';
 import questionsAccord from './modules/questionsAccord';
 import checkSale from './modules/checkSale';
+import messageForm from './modules/messageForm';
+
 
 // PopUp по клику "Перезвоните мне"
 popUpCall();
@@ -24,3 +26,6 @@ questionsAccord();
 
 // PopUp для получения скидки
 checkSale();
+
+// Форма с сообщением
+messageForm();

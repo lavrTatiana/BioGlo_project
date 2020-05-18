@@ -10,6 +10,8 @@ const sendForm = () => {
   
   forms.forEach((form) => {
 
+    form.noValidate = true;
+    
     const inputs = form.querySelectorAll('input');
     inputs.forEach((item) => {
       
