@@ -5,7 +5,6 @@ const checkSale = () => {
         popUpCheck = document.querySelector('.popup-check');
 
   togglePopUp(checkBtn, popUpCheck);
-
 };
 
 export default checkSale;
