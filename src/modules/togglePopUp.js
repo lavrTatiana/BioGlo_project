@@ -10,6 +10,7 @@ const togglePopUp = (btn, popup) => {
   popup.addEventListener('click', (event) => {
     
     let target = event.target;
+
     if (target.classList.contains('popup-close')) {
       popup.style.display = 'none';
     } else {

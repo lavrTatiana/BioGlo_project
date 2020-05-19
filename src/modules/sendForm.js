@@ -30,8 +30,17 @@ const sendForm = () => {
 
     });
 
-    form.addEventListener('click', () => {
-      form.noValidate = false;
+    form.addEventListener('click', (event) => {
+      
+      let target = event.target;
+
+      if (target.classList.contains('popup-close')){
+        event.preventDefault();
+        form.noValidate =true;
+      } else {
+        form.noValidate = false;
+      }
+      
     });
 
     form.addEventListener('submit', (event) => {
