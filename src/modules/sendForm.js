@@ -3,8 +3,9 @@ const sendForm = () => {
   const forms = document.querySelectorAll('form');
 
   const errorMessage = 'Что-то пошло не так',
-        successMessage = 'Ваша заявка отправлена! Мы скоро с Вами свяжемся!';
-        
+        successMessage = 'Ваша заявка отправлена! Мы скоро с Вами свяжемся!',
+        spinner = document.querySelector('.loadingio-spinner-spinner-ivatvn3eux');
+  
   forms.forEach((form) => {
 
     form.noValidate = true;
@@ -34,13 +35,10 @@ const sendForm = () => {
       const statusMessage = document.createElement('div');
       statusMessage.style.cssText = 'font-size: 1.5rem; color: black;';
       
-      const spinner = document.querySelector('.loadingio-spinner-spinner-ivatvn3eux');
-
       form.appendChild(statusMessage);
       statusMessage.appendChild(spinner);
 
       const formData = new FormData(form);
-      console.log(formData);
       
       let body = {};      
       formData.forEach((val, key) => {
