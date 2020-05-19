@@ -30,8 +30,13 @@ const sendForm = () => {
 
     });
 
+    form.addEventListener('click', () => {
+      form.noValidate = false;
+    });
+
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      
       const statusMessage = document.createElement('div');
       statusMessage.style.cssText = 'font-size: 1.5rem; color: black;';
       
