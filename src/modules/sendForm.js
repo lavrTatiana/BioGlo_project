@@ -6,6 +6,8 @@ const sendForm = () => {
         successMessage = 'Ваша заявка отправлена! Мы скоро с Вами свяжемся!',
         spinner = document.querySelector('.loadingio-spinner-spinner-ivatvn3eux');
   
+  spinner.style.display = 'none';
+
   forms.forEach((form) => {
 
     form.noValidate = true;
@@ -40,17 +42,20 @@ const sendForm = () => {
       } else {
         form.noValidate = false;
       }
-      
+
     });
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       
       const statusMessage = document.createElement('div');
-      statusMessage.style.cssText = 'font-size: 1.5rem; color: black;';
+      statusMessage.style.cssText = 'font-size: 1.5rem; color: blue;';
       
       form.appendChild(statusMessage);
+      
       statusMessage.appendChild(spinner);
+      spinner.style.display = 'block';
+      spinner.style.margin = 'auto';
 
       const formData = new FormData(form);
       
