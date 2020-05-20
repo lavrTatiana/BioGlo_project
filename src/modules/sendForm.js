@@ -1,6 +1,4 @@
-const sendForm = () => {
-
-  const forms = document.querySelectorAll('form');
+const sendForm = (form) => {
 
   const errorMessage = 'Что-то пошло не так',
         successMessage = 'Ваша заявка отправлена! Мы скоро с Вами свяжемся!',
@@ -8,7 +6,7 @@ const sendForm = () => {
   
   spinner.style.display = 'none';
 
-  forms.forEach((form) => {
+  
 
     form.noValidate = true;
     
@@ -47,6 +45,7 @@ const sendForm = () => {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
+      
       
       const statusMessage = document.createElement('div');
       statusMessage.style.cssText = 'font-size: 1.5rem; color: blue;';
@@ -87,7 +86,7 @@ const sendForm = () => {
       
       clearInputs(form);
     });
-  });
+  
   
 
   const postData = (body) => {

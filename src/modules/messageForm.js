@@ -1,9 +1,12 @@
+import sendForm from './sendForm';
+
 const messageForm = () => {
   const directorForm = document.querySelector('.director-form'),
         questionInput = directorForm.querySelector('input'),
         consultationBtn = document.querySelector('.consultation-btn'),
         popupConsultation = document.querySelector('.popup-consultation'),
-        captureForm = popupConsultation.querySelector('.capture-form');
+        captureForm = popupConsultation.querySelector('.capture-form'),
+        formConsultation = document.querySelector('.form-consultation');
 
   let invisInput = document.createElement('input');
   invisInput.setAttribute('name', 'user-message');
@@ -32,6 +35,8 @@ const messageForm = () => {
     });
 
   });
+
+  sendForm(formConsultation);
   
 };
 
