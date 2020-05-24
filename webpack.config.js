@@ -10,7 +10,9 @@ module.exports = {
     publicPath: '/dist'
   },
   devServer: {
-    overlay: true
+    compress: true,
+    port: 8000
+  
   },
   module: {
     rules: [
